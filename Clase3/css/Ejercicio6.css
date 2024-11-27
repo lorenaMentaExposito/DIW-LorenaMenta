@@ -1,0 +1,23 @@
+div{
+    background-color:hsl(0, 100, 48);
+    border: 2px, solid, rgb(0, 0, 0);
+    width: 400px;
+
+}
+
+h1{
+    color: blueviolet;
+}
+
+p{
+    color: #0e66f7;
+}
+
+button{
+    color: rgba(204, 204, 204, alpha);
+    text-decoration: hsla(0, 0, 0, 20%);   
+}
+
+:hover {
+    color: #8e5100;
+}

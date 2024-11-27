@@ -1,0 +1,21 @@
+body{
+    align-items: center;
+    background-image: url('https://placehold.co/1200x800');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    font-family: "Geist Mono", serif;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.8); 
+    font-size: 3rem; 
+    text-shadow: 2px 2px 5px #aa00ff; 
+    font-size: 50px; 
+    text-align: center;
+  }
