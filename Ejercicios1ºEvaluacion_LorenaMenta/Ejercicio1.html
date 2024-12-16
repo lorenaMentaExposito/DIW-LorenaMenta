@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Página web</title>
+    <style>
+        /* Definición de variables */
+        :root {
+            --color-fondo-header-footer: #333;
+            --color-texto-header-footer: #fff;
+            --margen-seccion: 20px;
+            --color-enlace: #8c00ff;
+        }
+
+        /* Estilos globales */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: var(--color-fondo-header-footer);
+            color: var(--color-texto-header-footer);
+            text-align: center;
+            padding: var(--margen-seccion);
+        }
+
+        /* Menú de navegación */
+        nav {
+            background-color: var(--color-fondo-header-footer);
+            text-align: center;
+            padding: var(--margen-seccion);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--color-enlace);
+            font-weight: bold;
+        }
+
+        /* Contenido principal */
+        main {
+            margin: var(--margen-seccion);
+            padding: var(--margen-seccion);
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: var(--color-fondo-header-footer);
+            color: var(--color-texto-header-footer);
+            text-align: center;
+            padding: var(--margen-seccion);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ejercicio 1</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>Bienvenido a mi primera página. Aquí hay una lista de cosas interesantes:</p>
+        <ul>
+            <li>Aprender HTML</li>
+            <li>Utilizar CSS</li>
+            <li>Crear sitios web increíbles</li>
+        </ul>
+    </main>
+    <footer>
+        <p>© 2024 Diseño Interfaces Web</p>
+    </footer>
+</body>
+</html>
