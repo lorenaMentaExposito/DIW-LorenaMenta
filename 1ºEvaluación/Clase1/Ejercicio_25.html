@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de Color de Fondo</title>
+    <style>
+        /* Estilo básico para el formulario y el botón */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #colorForm {
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        label {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seleccione un color de fondo</h1>
+    <div id="colorForm">
+        <form id="formulario">
+            <label>
+                <input type="radio" name="color" value="lightblue"> Azul Claro
+            </label><br>
+            <label>
+                <input type="radio" name="color" value="lightgreen"> Verde Claro
+            </label><br>
+            <label>
+                <input type="radio" name="color" value="lightcoral"> Coral Claro
+            </label><br>
+            <button type="button" onclick="cambiarColor()">Aplicar Color</button>
+        </form>
+    </div>
+
+    <script>
+        // Función que cambia el color de fondo basado en la selección del usuario
+        function cambiarColor() {
+            // Obtiene el valor del color seleccionado
+            const colorSeleccionado = document.querySelector('input[name="color"]:checked');
+
+            // Si se selecciona un color, cambia el fondo del cuerpo de la página
+            if (colorSeleccionado) {
+                document.body.style.backgroundColor = colorSeleccionado.value;
+            } else {
+                alert("Por favor, seleccione un color.");
+            }
+        }
+    </script>
+</body>
+</html>

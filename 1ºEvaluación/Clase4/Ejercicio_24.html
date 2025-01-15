@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 24 - Tarjeta de Perfil</title>
+    <style>
+        :root {
+            --color-primario: #4CAF50;
+            --color-secundario: #2196F3;
+            --color-fondo: #f0f0f0;
+            --color-texto: #333;
+            --espacio-base: 16px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .tarjeta {
+            background-color: white;
+            padding: var(--espacio-base);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+            transition: background-color 0.3s ease;
+        }
+
+        .tarjeta:hover {
+            background-color: var(--color-primario);
+            color: white;
+        }
+
+        .perfil {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: var(--espacio-base);
+        }
+
+        .nombre-usuario::before {
+            content: "👤";
+        }
+
+        .biografia::first-letter {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-secundario);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .seguir {
+            background-color: var(--color-secundario);
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+
+        .seguir:active {
+            background-color: var(--color-primario);
+        }
+
+        .seguir::after {
+            content: " →";
+        }
+
+        /* Enlaces */
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="tarjeta">
+        <img src="https://placehold.co/300x150" class="imagen-perfil">
+        <h2 class="nombre-usuario">
+            <span class="icono"></span> Juan Pérez
+        </h2>
+        <p class="biografia">
+            <span class="primera-letra">D</span>esarrollador web apasionado por la tecnología y el código abierto.
+        </p>
+        <p>
+            Aquí tienes un <a href="#">enlace de ejemplo</a>
+        </p>
+        <button class="boton">Seguir<span class="flecha"> →</span></button>
+    </div>
+</body>
+</html>

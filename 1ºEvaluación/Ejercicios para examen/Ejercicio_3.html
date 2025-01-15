@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Galeria de Imagenes</title>
+    <style>
+        /* Estilo global */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        /* Contenedor principal */
+        .gallery-container {
+            text-align: center;
+            width: 80%;
+        }
+
+        /* Título */
+        .gallery-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Contenedor de la galería */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        /* Estilo de las imágenes */
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            border: 3px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Efecto hover */
+        .gallery img:hover {
+            border-color: #007bff;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <h1>Galería de Imágenes</h1>
+        <div class="gallery">
+            <img src="https://placeholder.co/150x150" alt="Imagen 1">
+            <img src="https://placeholder.co/150x150" alt="Imagen 2">
+            <img src="https://placeholder.co/150x150" alt="Imagen 3">
+            <img src="https://placeholder.co/150x150" alt="Imagen 4">
+            <img src="https://placeholder.co/150x150" alt="Imagen 5">
+            <img src="https://placeholder.co/150x150" alt="Imagen 6">
+        </div>
+    </div>
+</body>
+</html>

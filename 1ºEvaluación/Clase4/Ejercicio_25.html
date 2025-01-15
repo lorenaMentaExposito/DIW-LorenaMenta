@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 25 - Lista de Productos</title>
+    <style>
+        /* Variables CSS */
+        :root {
+            --color-even: #f9f9f9;
+            --color-odd: #e0e0e0;
+            --color-hover: #d3d3f2;
+            --color-agotado: #ffcccc;
+            --color-nuevo: #ccffcc;
+            --spacing: 10px;
+            --original-price: 100px;
+            --discounted-price: 75px;
+        }
+
+        /* Estilo base */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .lista {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Alternar colores con nth-child */
+        .producto:nth-child(even) {
+            background-color: var(--color-even);
+        }
+
+        .producto:nth-child(odd) {
+            background-color: var(--color-odd);
+        }
+
+        /* Pseudoclases */
+        .producto:hover {
+            box-shadow: 0 0 10px var(--color-hover);
+        }
+
+        .producto:not(.agotado) {
+            border-left: 4px solid green;
+        }
+
+        .producto.agotado {
+            background-color: var(--color-agotado);
+            position: relative;
+        }
+
+        .producto.nuevo {
+            background-color: var(--color-nuevo);
+            position: relative;
+        }
+
+        /* Pseudoelementos */
+        .producto.nuevo::before {
+            content: "¡Nuevo!";
+            font-size: 12px;
+            color: green;
+            top: 10px;
+            left: 10px;
+        }
+
+        .producto.agotado::after {
+            content: " (Agotado)";
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Estilizar la primera línea */
+        .description::first-line {
+            font-weight: bold;
+            color: #678456;
+        }
+
+        /* Espaciado */
+        .producto {
+            padding: var(--spacing);
+            margin-bottom: var(--spacing);
+            position: relative;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <ul class="lista">
+        <li class="producto disponible">
+            <span class="product-name">Producto 1: disponible</span>
+            <p class="description">Descripción del producto.</p>
+        </li>
+        <li class="producto agotado">
+            <span class="product-name">Producto 2: agotado</span>
+            <p class="description">Descripción del producto.</p>
+        </li>
+        <li class="producto nuevo">
+            <span class="product-name">Producto 3: nuevo</span>
+            <p class="description">Descripción del producto.</p>
+        </li>
+        <li class="producto disponible">
+            <span class="product-name">Producto 4: disponible</span>
+            <p class="description">Descripción del producto.</p>
+        </li>
+    </ul>
+</body>
+</html>

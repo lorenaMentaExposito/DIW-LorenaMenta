@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 26 - Formulario de Contacto</title>
+    <style>
+        /* Variables CSS */
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #f44336;
+            --focus-color: #80deea;
+            --text-color: #333;
+            --font-size: 16px;
+            --padding: 10px;
+            --border-radius: 5px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: var(--font-size);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        .form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form input,
+        .form textarea {
+            width: 100%;
+            padding: var(--padding);
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: var(--border-radius);
+            font-size: var(--font-size);
+        }
+
+        .form input:focus,
+        .form textarea:focus {
+            outline: none;
+            border: 1px solid var(--focus-color);
+            background-color: #e0f7fa;
+        }
+
+        .form input:invalid,
+        .form textarea:invalid {
+            border-color: var(--secondary-color);
+        }
+
+        .form input:invalid::placeholder,
+        .form textarea:invalid::placeholder {
+            color: var(--secondary-color);
+        }
+
+        .form button {
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: var(--padding);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            width: 100%;
+            font-size: var(--font-size);
+        }
+
+        .form button:valid {
+            background: #388e3c;
+        }
+
+        .form button:hover {
+            background: #45a049;
+        }
+
+        .required::after {
+            content: "*";
+            color: var(--secondary-color);
+        }
+
+        ::selection {
+            background: var(--primary-color);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <form class="form" novalidate>
+        <label class="required" for="name">Nombre</label>
+        <input type="text" id="name" name="name" placeholder="Tu nombre" required><br><br>
+
+        <label class="required" for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required><br><br>
+
+        <label class="required" for="message">Mensaje</label><br>
+        <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí" required></textarea><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

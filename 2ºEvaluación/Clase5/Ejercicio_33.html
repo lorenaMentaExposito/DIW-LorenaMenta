@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 33</title>
+    <style>
+        .container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            color: white;
+        }
+
+        .caja {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            opacity: 0.9;
+        }
+
+        .roja {
+            background-color: red;
+            z-index: 1;
+            top: 20px;
+            left: 20px;
+        }
+
+        .verde {
+            background-color: green;
+            z-index: 2;
+            top: 40px;
+            left: 40px;
+        }
+
+        .azul {
+            background-color: blue;
+            z-index: 3;
+            top: 60px;
+            left: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caja roja">caja roja</div>
+        <div class="caja verde">caja verde</div>
+        <div class="caja azul">caja azul</div>
+    </div>
+</body>
+</html>
