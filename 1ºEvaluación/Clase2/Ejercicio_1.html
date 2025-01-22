@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <label for="">Nombre completo</label>
+            <input type="text" name="nombre" required> <br><br>
+        </fieldset>
+        
+        <label for="">Correo electronico</label>
+        <input type="text" name="correo" required> <br><br>
+        <label for="">Contraseña</label>
+        <input type="password" name="Contrasena" required> <br><br>
+        <label for="">Fecha de nacimiento</label>
+        <input type="date" name="Nacimiento"> <br><br>
+        <label for="">Género</label>
+        <input type="radio" name="Género">Masculino
+        <input type="radio" name="Género">Femenino <br><br>
+        <label for="">Intereses</label>
+        <input type="checkbox" name="Intereses"> Deportes
+        <input type="checkbox" name="Intereses"> Música
+        <input type="checkbox" name="Intereses"> Tecnología <br><br>
+        <label for="pais">País</label>
+        <select id="pais" name="pais">
+            <option value=""></option>
+            <option value="italia">Italia</option>
+            <option value="espana">España</option>
+            <option value="alemania">Alemania</option>
+        </select><br><br>
+        <label for="foto_perfil">Foto de perfil</label>
+        <input type="file" id="foto_perfil" name="foto_perfil">
+        <img src="imagenes/Boo.jpg"><br><br>
+        <input type="submit" name="Enviar">
+        <input type="reset" name="Restablecer">
+    </form>
+</body>
+</html>
