@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS v5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <title>Forbes India - Bootstrap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background-color: black;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .navbar {
+            background-color: #000 !important;
+        }
+        .navbar-nav .nav-link {
+            color: rgb(251, 251, 251);
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .nav-item-especial {
+            font-size: 14px;
+            font-weight: bold;
+            color: #fb002e;
+            padding: 8px 15px;
+        }
+
+        .container-fluid {
+            max-width: 1200px;
+        }
+
+        .article {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .article h4 {
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .article span {
+            display: block;
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .lateral img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .subscribcion img {
+            width: 80%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .subscribcion p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .list-group-item {
+            border: none;
+            font-size: 14px;
+            padding: 10px;
+        }
+        .access{
+            color: rgb(111, 109, 109);
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+<div class="header d-flex justify-content-between align-items-center">
+    <img src="logo-forbes.png" class="logo">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        LEADERSHIP
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Mentors and Mavens</a></li>
+                        <li><a class="dropdown-item" href="#">All Stories</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">INNOVATION</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BILLIONAIRES</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">STARTUPS</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        PODCASTS
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">To The Point</a></li>
+                        <li><a class="dropdown-item" href="#">one Thing Today in Tech</a></li>
+                        <li><a class="dropdown-item" href="#">Tech Conversations</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        VIDEOS
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Leadership Mantras</a></li>
+                        <li><a class="dropdown-item" href="#">Pathbreakers</a></li>
+                        <li><a class="dropdown-item" href="#">Lets Talk About</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">LIFE</a>
+                </li>
+            </ul>
+        </div>
+
+        <a href="#" class="nav-item-especial mx-2">SUBSCRIBE</a>
+        <a href="#" class="nav-item-especial mx-2">LOG IN</a>
+    </nav>
+</div>
+
+<!-- Artuculos principales -->
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="articulo1.png" class="articulos">
+                    <h4 class="mt-2">Budget 2025: Focus on growth and fiscal consolidation</h4>
+                </div>
+                <div class="col-md-6">
+                    <img src="articulo2.png" class="articulos">
+                    <h4 class="mt-2">What drives managers to sabotage talent?</h4>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <h5>More Articles</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">Backstage with Sabyasachi at 25: On the prowl for global markets</li>
+                    <li class="list-group-item">Change can come only if we break stereotypes around caregiving: Tara Singh</li>
+                    <li class="list-group-item">Accel's Anand Daniel and Prayank Swaroop on the next decade of Indian startups</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Lateral derecho -->
+        <div class="col-md-4">
+            <div class="lateral">
+                <img src="anuncio.png">
+                <div class="subscribcion mt-3">
+                    <img src="Forbes-india.png" class="img-fluid">
+                    <p>Subscribe today and save up to 76% off the cover price.</p>
+                    <p class="access">All Access + Weekly Delivery. <br> Both the print magazine and full digital access</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
