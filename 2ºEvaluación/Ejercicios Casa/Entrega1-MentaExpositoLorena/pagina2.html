@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 BEM</title>
+    <style>
+        .header {
+            background-color: #ffffff;
+            color: rgb(222, 20, 20);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .header__main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .header__menu {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .header__item {
+            cursor: pointer;
+        }
+
+        .header__options {
+            display: flex;
+            gap: 10px;
+        }
+
+        .main__ads-image {
+            width: 100%;
+            display: block;
+            margin: 20px 0;
+        }
+
+        .main__scores {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .main__scores-box {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .news__item {
+            padding: 15px;
+            border-top: 2px solid #ddd;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header_main">
+            <h1 class="header_logo">MARCA</h1>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__item">Fútbol</li>
+                    <li class="header__item">Baloncesto</li>
+                    <li class="header__item">Motor</li>
+                    <li class="header__item">Polideportivo</li>
+                    <li class="header__item">Coches</li>
+                </ul>
+            </nav>
+            <div class="header__options">
+                <button class="header__subscribe">Suscríbete</button>
+                <button class="header__login">Iniciar sesión</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="main__ads">
+            <img src="iphone16_ad.jpg" alt="Publicidad iPhone 16" class="main__ads-image">
+        </section>
+
+        <section class="main__scores">
+            <div class="main__scores-box">
+                <h3 class="main__scores-title">LALIGA EA SPORTS</h3>
+                <p class="main__scores-match">Rayo - Celta</p>
+            </div>
+            <div class="main__scores-box">
+                <h3 class="main__scores-title">LALIGA HYPERMOTION</h3>
+                <p class="main__scores-match">Granada - Burgos CF</p>
+            </div>
+            <div class="main__scores-box">
+                <h3 class="main__scores-title">SERIE A</h3>
+                <p class="main__scores-match">Lazio - Como</p>
+            </div>
+        </section>
+
+        <section class="main__news">
+            <article class="news__item">
+                <h3 class="news__title">LaLiga lleva el 'caso Olmo' a los tribunales</h3>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

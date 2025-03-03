@@ -14,9 +14,130 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Página Web - Bootstrap</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .carousel img {
+            max-width: auto;
+            max-height: 500px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .modal-dialog {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.webp" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+                Periódico Digital
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link disabled">Cuenta</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+                <button class="btn btn-primary ms-2 d-none d-sm-inline" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
+                <button class="btn btn-success ms-2 d-none d-sm-inline">Darse de Alta</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <a href="#">Crear cuenta</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="noticiasCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="carrusel1.png" class="d-block w-100" alt="Noticia 1">
+            </div>
+            <div class="carousel-item">
+                <img src="carrusel2.png" class="d-block w-100" alt="Noticia 2">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#noticiasCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#noticiasCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Tarjetas de noticias -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="noticia1.png" class="card-img-top" alt="Noticia 3">
+                    <div class="card-body">
+                        <h5 class="card-title">El Rey reivindica al Ejercito por su defensa de la Democracia</h5>
+                        <p class="card-text">Elogia las Fuerzas Armadas por su papel fundamental en la preservación de la identidad historica de España. La Princesa Leonor asiste por primera vez vestida de cadete.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="noticia2.png" class="card-img-top" alt="Noticia 4">
+                    <div class="card-body">
+                        <h5 class="card-title">El emotivo homenaje de Recycled J a su padre, fallecido hace un año</h5>
+                        <p class="card-text">Ahora es uno de los artistas del género urbano con más reproducciones en todo el país. Su padre, que era frutero en su barrio, le enseñó lo que es trabajar duro para conseguir en un futuro todo lo que se desea.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

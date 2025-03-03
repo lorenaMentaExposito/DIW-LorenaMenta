@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 BEM</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            background-color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .header_nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header_menu {
+            background: none;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        
+        .oferta {
+            background: #FFD138;
+            border-radius: 3px;
+            border-color: #FFD138;
+            font-size: 13px;
+            height: 40px;
+            cursor: pointer;
+        }
+        
+        .login{
+            background: white;
+            border-radius: 3px;
+            border-color: #FFD138;
+            height: 40px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .main {
+            display: flex;
+            gap: 20px;
+            padding: 50px;
+        }
+        
+        .noticia_principal{
+            width: 70%;
+        }
+
+        .noticia {
+            width: 70%;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .imagen1  {
+            width: 50%;
+            
+        }
+
+        .pie_foto {
+            font-size: 10px;
+            color: #777;
+        }
+
+        .sidebar {
+            width: 30%;
+        }
+
+        .sidebar_news {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f8f9fa;
+        }
+
+        .sidebar_title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .sidebar_summary {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header_container">
+            <nav class="header_nav">
+                <button class="header_menu">☰</button>
+                <img src="imagenLogo.png" alt="" class="header_logo">
+                <div class="botones_nav">
+                    <button class="oferta">6 MESES, 1 €/MES</button>
+                    <button class="login">Iniciar sesión ▼</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main">
+        <section class="noticia_principal">
+            <h2 class="title">Maduro se proclama presidente sin mostrar las pruebas de su triunfo</h2>
+            <section class="noticia">
+                <p class="subtitle">JUAN DIEGO QUESADA / FLORANTONIA SINGER / ALONSO MOLEIRO | Bogotá / Caracas</p>
+                <p class="text">
+                    El mandatario venezolano jura el cargo por otros seis años envuelto en acusaciones de fraude. Edmundo González, que había prometido estar hoy en Caracas, continúa en República Dominicana
+                </p>
+                <div class="main_link">
+                    <span class="icon_link">➖</span>
+                    <a href="#" class="link"><strong>América da la espalda al dirigente chavista en su “fraudulenta” toma de posesión</strong></a>
+                </div>
+                <img src="imagen1.png" alt="" class="imagen1">
+                <p class="pie_foto">Nicolás Maduro jura su cargo ante el presidente de la Asamblea Nacional, en Caracas. REUTERS</p>
+            </section>
+        </section>
+        
+        <aside class="sidebar">
+            <article class="sidebar_news">
+                <h3 class="sidebar_title">El dirigente, tras jurar el cargo: “Digan lo que digan, no pudieron impedir esta investidura”</h3>
+                <p class="sidebar_summary">EE UU eleva a 25 millones de dólares la recompensa por información para detener a Maduro y Cabello</p>
+            </article>
+            <article class="sidebar_news">
+                <h3 class="sidebar_title">La UE y EE UU condenan a Maduro por “carecer de legitimidad democrática” y redoblan sus sanciones</h3>
+                <p class="sidebar_summary">Bruselas impone castigos a 15 cargos por “socavar la democracia”</p>
+            </article>
+        </aside>
+    </main>
+</body>
+</html>
